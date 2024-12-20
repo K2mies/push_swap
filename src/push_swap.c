@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/19 14:26:05 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/20 15:26:28 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,31 @@
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
-	t_stack_node	*b;
+	//t_stack_node	*b;
 
 	a = NULL;
-	b = NULL;
-
-	if (argc == 1 || argc == 2 && !argv[1][0])
+	//b = NULL;
+	
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if	(argc == 2)
 	{
-		//parse the string if it is a string of characters, convert it into an array of inputs. 
-		argv = ft_split(argv[1], ' ')
+		argv = ft_split(argv[1], ' ');
+	}
+	init_stack_a(&a, argv + 1);
+	while(a != NULL)
+	{
+		printf("num = %d\n", a->nbr);
+		a = a->next;
 	}
 
+	/*int		i = 0;
+	while (argv[i])
+	{
+		printf("argv[%d] = %s\n", i, argv[i]);
+		i++;
+	}
+	*/
 	//populate the stack
 		//initialiize the stack a and append each input number as a node.
 		// error handling. (free stack a and return error).
