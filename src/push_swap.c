@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/20 15:26:28 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/20 16:08:07 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
+	t_stack_node	*temp;
 	//t_stack_node	*b;
 
 	a = NULL;
@@ -26,11 +27,17 @@ int	main(int argc, char **argv)
 	{
 		argv = ft_split(argv[1], ' ');
 	}
-	init_stack_a(&a, argv + 1);
-	while(a != NULL)
+	else if (argc > 2)
 	{
-		printf("num = %d\n", a->nbr);
-		a = a->next;
+		argv = argv + 1;
+	}
+	init_stack_a(&a, argv);
+	printf("linked list output: \n");
+	temp = a;
+	while(temp != NULL)
+	{
+		printf("num = %d\n", temp->nbr);
+		temp = temp->next;
 	}
 
 	/*int		i = 0;
