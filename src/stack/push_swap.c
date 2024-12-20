@@ -6,14 +6,11 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/18 16:55:00 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:26:05 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-char	*ft_strncpy(char *s1, char *s2, int n);
-char	**ft_split(char *str);
 
 int	main(int argc, char **argv)
 {
@@ -30,53 +27,21 @@ int	main(int argc, char **argv)
 		//parse the string if it is a string of characters, convert it into an array of inputs. 
 		argv = ft_split(argv[1], ' ')
 	}
+
+	//populate the stack
+		//initialiize the stack a and append each input number as a node.
+		// error handling. (free stack a and return error).
+		//check for each input if it is a long integer
+			//if the input is a string convert it to a long integer.
+		//append the nodes to stack 'a'
+	
+	//check if stack a is sorted.
+		//if not sorted, implament sorting algorithm.
+			//check for 2 numbers
+				//if so, simply swap the numbers
+			//check for 3 numbers
+				//if so, implament our simple sort three algorithm
+			// if the stack has moe than 3 numbers
+				//if so, implament radix algorithm.
 }
 
-char	*ft_strncpy(char *s1, char *s2, int n)
-{
-	int		i;
-	i = -1;
-	while (i++ < n && s2[i])
-		s1[i] = s2[i];
-	s1[i] = '\0';
-	return (s1);
-}
-char	**ft_split(char *str)
-{
-	int		i;
-	int		j;
-	int		k;
-	int		wc;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	wc = 0;
-
-	while (str[i])
-	{
-		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
-			i++;
-		if (str[i])
-			wc++;
-		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
-			i++;
-	}
-	char **out = (char **)malloc(sizeof(char *) * (wc + 1))
-	i = 0;
-	while (str[i])
-	{	
-		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
-			i++;
-		j = i;
-		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
-			i++;
-		if (i > j)
-		{
-			out[k] = malloc(sizeof(char) * (i - j) + 1);
-			ft_strncpy(out[k++], &str[j], (i - j));
-		}
-	}
-	out[k] = NULL;
-	return (out);
-}

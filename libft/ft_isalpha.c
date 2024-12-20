@@ -1,29 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 12:51:28 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/18 13:03:46 by rhvidste         ###   ########.fr       */
+/*   Created: 2024/10/28 16:24:31 by rhvidste          #+#    #+#             */
+/*   Updated: 2024/11/11 15:58:58 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include <stdlib.h>
-# include <limits.h>
-# include <stdbool.h>
-# include <unistd.h>
-
-typedef struct	s_stack_node
+int	ft_isalpha(int c)
 {
-	int						value;
-	int						current_position;
-	struct	s_stack_node	*next;
-	struct	s_stack_node	*prev;
-}							t_stack_node;
-
-#endif
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+}
