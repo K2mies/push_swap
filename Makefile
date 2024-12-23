@@ -28,7 +28,10 @@ RM						= rm -f
 #Source Files---------------------------------------
 SRCS 					= $(SRC_DIR)push_swap.c \
 						$(SRC_DIR)stack_init.c \
-						$(SRC_DIR)stack_utils.c
+						$(SRC_DIR)stack_utils.c \
+						$(SRC_DIR)str_utils.c \
+						$(SRC_DIR)error.c \
+						#$(SRC_DIR)swap.c
 #Obj Files-----------------------------------------------------------------
 OBJ						= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 

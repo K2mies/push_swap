@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*   str_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 13:36:58 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/23 14:49:07 by rhvidste         ###   ########.fr       */
+/*   Created: 2024/12/23 13:00:36 by rhvidste          #+#    #+#             */
+/*   Updated: 2024/12/23 13:04:37 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		stack_len(t_stack_node *stack)
+void	free_split(char **vector)
 {
-	int		count;
-
-	if (!stack)
-		return (0);
-	count = 0;
-	while (stack)
+	int		i;
+	i = 0;
+	while (vector[i])
 	{
-		stack = stack->next;
-		count++;
+		free(vector[i++]);
 	}
-	return (count);
+	free(vector);
 }
 
-t_stack_node	*find_last(t_stack_node *stack)
+char	*str_comp(int argc, char **argv)
 {
-	if (!stack)
-		return (NULL);
-	while (stack->next)
-		stack = stack->next;
-	return (stack);
+	char	*str;
+	char	*temp;
+	int		i;
+	i = 1;
+	while (i < argc)
+	{
+		char	*old_str;
+		old_str = str;
+		temp = ft_strjoin(str, " ");
+		str = ft_strjoin(temp, argv[i]);
+		free(old_str);
+		free(temp);
+		i++;
+	}
+	return (str);
 }
