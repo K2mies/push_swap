@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:51:28 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 14:57:54 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 15:57:18 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 # include <stdlib.h>
 # include <limits.h>
-# include <stdbool.h>
 # include <unistd.h>
 
 typedef struct	s_stack_node
