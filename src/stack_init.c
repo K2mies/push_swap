@@ -1,5 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
+/*   Updated: 2024/12/27 10:24:54 by rhvidste         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "push_swap.h"
 
 static void	append_node(t_stack_node **stack, int data, int index)
 {
@@ -47,5 +58,3 @@ void	init_stack_a(t_stack_node **a, char **argv)
 		i++;
 	}
 }
-
-

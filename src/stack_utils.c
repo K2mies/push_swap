@@ -6,13 +6,13 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:36:58 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/23 14:49:07 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 10:30:08 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		stack_len(t_stack_node *stack)
+int	stack_len(t_stack_node *stack)
 {
 	int		count;
 

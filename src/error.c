@@ -6,16 +6,15 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 10:29:26 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/23 15:40:04 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 10:29:41 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-
-
 void	free_stack(t_stack_node *head)
 {
 	t_stack_node	*temp;
+
 	while (head != NULL)
 	{
 		//t_stack_node	*temp = stack;
@@ -27,7 +26,7 @@ void	free_stack(t_stack_node *head)
 	//head = NULL;
 }
 
-int		error_syntax(char *str)
+int	error_syntax(char *str)
 {
 	if (!(*str == '+' || *str == '-' || (*str >= '0' && *str <= '9')))
 		return (1);
@@ -41,7 +40,7 @@ int		error_syntax(char *str)
 	return (0);
 }
 
-int		error_duplicate(t_stack_node *a, int n)
+int	error_duplicate(t_stack_node *a, int n)
 {
 	if (!a)
 		return (0);

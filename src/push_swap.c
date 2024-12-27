@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/23 15:35:21 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 10:32:24 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 int	main(int argc, char **argv)
 {
+	char			*str;
+	char			**split;
 	t_stack_node	*a;
-	t_stack_node 	*a_head;
+	t_stack_node	*a_head;
 	//t_stack_node	*b;
-	char	*str;
-	char	**split;
-
 	a = NULL;
-	a_head = NULL;
+	//a_head = NULL;
 	//b = NULL;
 	str = ft_strdup("");
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
-
 	str = str_comp(argc, argv);
 	//printf("%s\n", str);
 	split = ft_split(str, ' ');
 	free(str);
 	init_stack_a(&a, split);
 	free_split(split);
-	a_head = a;
 	//list output-----------------------------------
+	a_head = a;
 	printf("linked list output: \n");
 	int	i;
 	i = 0;
@@ -43,15 +41,14 @@ int	main(int argc, char **argv)
 		printf("num[%d] = %d\n", i++, a->nbr);
 		a = a->next;
 	}
+	//---------------------------------------------
 	free_stack(a_head);
-
 	//populate the stack
 		//initialiize the stack a and append each input number as a node.
 		// error handling. (free stack a and return error).
 		//check for each input if it is a long integer
 			//if the input is a string convert it to a long integer.
-		//append the nodes to stack 'a'
-	
+		//append the nodes to stack 'a'	
 	//check if stack a is sorted.
 		//if not sorted, implament sorting algorithm.
 			//check for 2 numbers
@@ -61,4 +58,3 @@ int	main(int argc, char **argv)
 			// if the stack has moe than 3 numbers
 				//if so, implament radix algorithm.
 }
-
