@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 10:52:38 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:46:28 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ static void	append_node(t_stack_node **stack, int data, int index)
 	node->next = NULL;
 	node->nbr = data;
 	node->index = index;
-	//node->cheapest = 0;
 	if (!(*stack))
 	{
 		*stack = node;

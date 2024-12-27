@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 10:29:26 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 11:08:33 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 14:50:12 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -17,13 +17,10 @@ void	free_stack(t_stack_node *head)
 
 	while (head != NULL)
 	{
-		//t_stack_node	*temp = stack;
 		temp = head;
 		head = head->next;
-		//head->nbr = 0;
 		free(temp);
 	}
-	//head = NULL;
 }
 
 int	error_syntax(char *str)
