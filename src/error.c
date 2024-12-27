@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 10:29:26 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 10:29:41 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 11:08:33 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -56,6 +56,6 @@ int	error_duplicate(t_stack_node *a, int n)
 void	free_errors(t_stack_node **a)
 {
 	free_stack(*a);
-	printf("Error\n");
+	ft_printf("Error\n");
 	exit(1);
 }
