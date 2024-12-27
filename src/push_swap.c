@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 10:32:24 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/27 10:55:53 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ int	main(int argc, char **argv)
 	free_split(split);
 	//list output-----------------------------------
 	a_head = a;
-	printf("linked list output: \n");
+	ft_printf("linked list output: \n");
 	int	i;
 	i = 0;
 	while(a != NULL)
 	{
-		printf("num[%d] = %d\n", i++, a->nbr);
+		ft_printf("num[%d] = %d\n", i++, a->nbr);
 		a = a->next;
 	}
 	//---------------------------------------------

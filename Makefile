@@ -14,7 +14,8 @@ NAME					= push_swap
 
 # Directories----------------------------------------
 
-LIBFT					= ./libft/libft.a
+#LIBFT					= ./libft/libft.a
+LIBFT					= ./ft_printf/libftprintf.a
 INC						= include/
 SRC_DIR					= src/
 OBJ_DIR					= obj/
@@ -41,7 +42,9 @@ start:
 						make all
 
 $(LIBFT):
-						make -C ./libft
+						#make -C ./libft
+						make -C ./ft_printf
+
 
 all:					$(NAME)
 
@@ -55,7 +58,8 @@ $(OBJ_DIR)%.o:			$(SRC_DIR)%.c
 #Clean----------------------------------------------------------------------------
 clean:
 								$(RM) -r $(OBJ_DIR)
-								make clean -C ./libft
+								#make clean -C ./libft
+								make clean -C ./ft_printf
 
 fclean:					clean
 								$(RM) $(NAME)
