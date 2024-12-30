@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 15:54:37 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:31:04 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,30 +32,35 @@ int	main(int argc, char **argv)
 	init_stack_a(&a, split);
 	free_split(split);
 	//list output-----------------------------------
-	ft_printf("linked list output before sort: \n");
-	ft_print_list(a);
+	//ft_printf("linked list output before sort: \n");
+	//ft_print_list(a);
 	if (stack_sorted(a) == 0)
 	{
-		ft_printf("stack not sorted \n");
+		//ft_printf("stack not sorted \n");
 		if (stack_len(a) == 2)
 		{
 			sa(&a, 1);
-			ft_printf("sorted stack:\n");
-			ft_print_list(a);
+			//ft_printf("sorted stack:\n");
+			//ft_print_list(a);
 		}
 		else if (stack_len(a) == 3)
 		{
 			sort_three(&a);
-			ft_printf("sorted stack:\n");
-			ft_print_list(a);
+			//ft_printf("sorted stack:\n");
+			//ft_print_list(a);
+		}
+		else 
+		{
+			//ft_printf("larger stack sort needed:\n");
+			sort_stacks(&a, &b);
+			//ft_printf("sorted stack:\n");
+			//ft_print_list(a);
 		}
 	}
 	else
 		ft_printf("stack is sorted \n");
 	free_stack(a);
 	free_stack(b);
-			// if the stack has moe than 3 numbers
-				//if so, implament radix algorithm.
 }
 
 //function to print output of list;

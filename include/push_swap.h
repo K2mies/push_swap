@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:51:28 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/27 15:57:18 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/30 17:29:08 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ typedef struct	s_stack_node
 {
 	int						nbr;
 	int						index;
-	//int					push_cost;
-	//bool					above_median;
-	//bool					cheapest;
+	int						push_cost;
+	int						above_median;
+	int						cheapest;
+	struct	s_stack_node	*target_node;
 	struct	s_stack_node	*next;
 	struct	s_stack_node	*prev;
 }							t_stack_node;
@@ -40,13 +41,21 @@ void			free_split(char **vector);
 void			free_errors(t_stack_node **a);
 //stack functions---------------------------------------------------
 void			init_stack_a(t_stack_node **a, char **argv);
+t_stack_node	*get_cheapest(t_stack_node *stack);
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name);
+//sets the index and also wether or not node is above the median (to 1 or 0).
+void	current_index(t_stack_node *stack);
+void	init_nodes_a(t_stack_node *a, t_stack_node *b);
+void	init_nodes_b(t_stack_node *a, t_stack_node *b);
 //stack utils-------------------------------------------------------
 int				stack_len(t_stack_node *stack);
 int				stack_sorted(t_stack_node *stack);
 t_stack_node	*find_last(t_stack_node *stack);
 t_stack_node	*find_max(t_stack_node *stack);
+t_stack_node	*find_min(t_stack_node *stack);
 //sorting------------------------------------------------------------
 void	sort_three(t_stack_node **a);
+void	sort_stacks(t_stack_node **a, t_stack_node **b);
 //commands-----------------------------------------------------------
 //SWAP---------------------------------------------------------------
 //swap first two nodes of stack(swap a).

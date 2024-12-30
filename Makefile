@@ -28,10 +28,13 @@ RM						= rm -f
 #Source Files---------------------------------------
 SRCS 					= $(SRC_DIR)push_swap.c \
 						$(SRC_DIR)stack_init.c \
+						$(SRC_DIR)init_a_to_b.c \
+						$(SRC_DIR)init_b_to_a.c \
 						$(SRC_DIR)stack_utils.c \
 						$(SRC_DIR)str_utils.c \
 						$(SRC_DIR)error.c \
 						$(SRC_DIR)sort_three.c\
+						$(SRC_DIR)sort_stacks.c \
 						$(SRC_DIR)swap.c \
 						$(SRC_DIR)push.c \
 						$(SRC_DIR)rotate.c \
