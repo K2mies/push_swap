@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 13:36:58 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/30 17:17:39 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/31 11:25:01 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	stack_sorted(t_stack_node *stack)
 
 t_stack_node	*find_min(t_stack_node *stack)
 {
-	long	min;
+	long			min;
 	t_stack_node	*min_node;
 
 	if (!stack)

@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/30 16:16:29 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/31 11:28:42 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,20 +51,23 @@ t_stack_node	*get_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name)
+void	prep_for_push(
+		t_stack_node **stack,
+		t_stack_node *top_node,
+		char stack_name)
 {
 	while (*stack != top_node)
 	{
 		if (stack_name == 'a')
 		{
-			if (top_node->above_median)
+			if (top_node->above_median == 1)
 				ra(stack, 1);
 			else
 				rra(stack, 1);
 		}
 		else if (stack_name == 'b')
 		{
-			if (top_node->above_median)
+			if (top_node->above_median == 1)
 				rb(stack, 1);
 			else
 				rrb(stack, 1);

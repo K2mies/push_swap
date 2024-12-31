@@ -38,7 +38,8 @@ SRCS 					= $(SRC_DIR)push_swap.c \
 						$(SRC_DIR)swap.c \
 						$(SRC_DIR)push.c \
 						$(SRC_DIR)rotate.c \
-						$(SRC_DIR)rev_rotate.c
+						$(SRC_DIR)rev_rotate.c\
+						$(SRC_DIR)rotate_both.c
 #Obj Files-----------------------------------------------------------------
 OBJ						= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 

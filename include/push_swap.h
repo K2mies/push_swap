@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:51:28 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/30 17:29:08 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/31 11:56:07 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,14 @@ void	rra(t_stack_node **a, int print);
 void	rrb(t_stack_node **b, int print);
 //rotate both stacks bottom nodes tot he top.
 void	rrr(t_stack_node **a, t_stack_node **b, int print);
+//rotate both based on cheapest
+void	rotate_both(
+		t_stack_node **a,
+		t_stack_node **b,
+		t_stack_node *cheapest_node);
+//rev rotate both based on chepest
+void	rev_rotate_both(
+		t_stack_node **a,
+		t_stack_node **b,
+		t_stack_node *cheapest_node);
 #endif

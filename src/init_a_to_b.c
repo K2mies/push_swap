@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:52:46 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/30 16:44:20 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:02:11 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ static void	cost_analysis(t_stack_node *a, t_stack_node *b)
 	while (a)
 	{
 		a->push_cost = a->index;
-		if (!(a->above_median))
+		if (!(a->above_median == 1))
 			a->push_cost = len_a - (a->index);
-		if (a->target_node->above_median)
+		if (a->target_node->above_median == 1)
 			a->push_cost += a->target_node->index;
 		else
 			a->push_cost += len_b - (a->target_node->index);
@@ -81,7 +81,7 @@ static void	cost_analysis(t_stack_node *a, t_stack_node *b)
 
 void	set_cheapest(t_stack_node *stack)
 {
-	long	cheapest_value;
+	long			cheapest_value;
 	t_stack_node	*cheapest_node;
 
 	if (!stack)
@@ -98,7 +98,6 @@ void	set_cheapest(t_stack_node *stack)
 	}
 	cheapest_node->cheapest = 1;
 }
-
 
 void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
