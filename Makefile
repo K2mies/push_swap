@@ -21,12 +21,13 @@ OBJ_DIR					= obj/
 
 #Compiler and Cflags---------------------------------
 
-CC 						= gcc
+CC 						= cc
 CFLAGS					= -Wall -Werror -Wextra -I
 RM						= rm -f
 
 #Source Files---------------------------------------
 SRCS 					= $(SRC_DIR)push_swap.c \
+						$(SRC_DIR)atol.c \
 						$(SRC_DIR)stack_init.c \
 						$(SRC_DIR)init_a_to_b.c \
 						$(SRC_DIR)init_b_to_a.c \

@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 14:52:46 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/31 12:15:12 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/02 10:37:28 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	current_index(t_stack_node *stack)
 	int	i;
 	int	median;
 
+	i = 0;
 	if (!stack)
 		return ;
 	median = stack_len(stack) / 2;

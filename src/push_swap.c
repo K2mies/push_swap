@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/31 11:13:10 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/31 14:12:02 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ int	main(int argc, char **argv)
 			//ft_print_list(a);
 		}
 	}
-	else
-		ft_printf("stack is sorted \n");
+	//else
+		//ft_printf("stack is sorted \n");
 	//ft_print_list(a);
 	free_stack(a);
 	free_stack(b);
