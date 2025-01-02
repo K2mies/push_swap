@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:51:28 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/31 15:42:42 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/02 11:15:36 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ typedef struct	s_stack_node
 	struct	s_stack_node	*prev;
 }							t_stack_node;
 
-
+//string handling--------------------------------------------------
+long			ft_atol(const char *s);
 //error handling----------------------------------------------------
 char			*str_comp(int argc, char **argv);
 int				error_syntax(char *str);
@@ -42,11 +43,13 @@ void			free_errors(t_stack_node **a);
 //stack functions---------------------------------------------------
 void			init_stack_a(t_stack_node **a, char **argv);
 t_stack_node	*get_cheapest(t_stack_node *stack);
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name);
+void			prep_for_push(t_stack_node **stack,
+				t_stack_node *top_node,
+				char stack_name);
 //sets the index and also wether or not node is above the median (to 1 or 0).
-void	current_index(t_stack_node *stack);
-void	init_nodes_a(t_stack_node *a, t_stack_node *b);
-void	init_nodes_b(t_stack_node *a, t_stack_node *b);
+void			current_index(t_stack_node *stack);
+void			init_nodes_a(t_stack_node *a, t_stack_node *b);
+void			init_nodes_b(t_stack_node *a, t_stack_node *b);
 //stack utils-------------------------------------------------------
 int				stack_len(t_stack_node *stack);
 int				stack_sorted(t_stack_node *stack);

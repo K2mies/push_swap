@@ -6,11 +6,22 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
-/*   Updated: 2024/12/31 15:42:45 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/02 11:15:44 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	node_init(int data, int index, t_stack_node *node)
+{
+	node->next = NULL;
+	node->target_node = NULL;
+	node->nbr = data;
+	node->index = index;
+	node->push_cost = 0;
+	node->above_median = 0;
+	node->cheapest = 0;
+}
 
 static void	append_node(t_stack_node **stack, int data, int index)
 {
@@ -22,9 +33,7 @@ static void	append_node(t_stack_node **stack, int data, int index)
 	node = malloc(sizeof(t_stack_node));
 	if (! node)
 		return ;
-	node->next = NULL;
-	node->nbr = data;
-	node->index = index;
+	node_init(data, index, node);
 	if (!(*stack))
 	{
 		*stack = node;
@@ -85,7 +94,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	{
 		if (error_syntax(argv[i]))
 			free_errors(a);
-		n = ft_atoi(argv[i]);
+		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
 			free_errors(a);
 		if (error_duplicate(*a, (int)n))
