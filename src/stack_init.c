@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/02 11:15:44 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/02 13:41:19 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,11 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	{
 		if (error_syntax(argv[i]))
 			free_errors(a);
+		if (argv[0][0] == '\0')
+		{
+			ft_printf("test 1");
+			free_errors(a);
+		}
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
 			free_errors(a);
