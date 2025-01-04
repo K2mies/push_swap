@@ -55,9 +55,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 					@make -C $(LIBFT)
-					@cp libft/libft.a .
-					@mv libft.a $(NAME)
-					@$(AR) $(NAME) $(OBJ)
+					@$(AR) $(NAME) $(OBJ) $(LIBFT)/*.o
 					@echo "$(GREEN)ft_printf compiled!$(DEF_COLOR)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJF)
