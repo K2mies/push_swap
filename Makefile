@@ -14,7 +14,8 @@ NAME					= push_swap
 
 # Directories----------------------------------------
 
-LIBFT					= ./ft_printf/libftprintf.a
+FT_PRINTF				= ./ft_printf/libftprintf.a
+LIBFT_A					= ./ft_printf/libft/libft.a
 INC						= include/
 SRC_DIR					= src/
 OBJ_DIR					= obj/
@@ -22,7 +23,7 @@ OBJ_DIR					= obj/
 #Compiler and Cflags---------------------------------
 
 CC 						= cc
-CFLAGS					= -Wall -Werror -Wextra -I
+CFLAGS					= -Wall -Werror -Wextra -g -I
 RM						= rm -f
 
 #Source Files---------------------------------------
@@ -47,34 +48,33 @@ OBJ						= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 #Build rules---------------------------------------------------------------
 
 start:
-						make all
+	make all
 
-$(LIBFT):
-						#make -C ./libft
-						make -C ./ft_printf
-
+$(FT_PRINTF) $(LIBFT_A):
+	make -C ./ft_printf
 
 all:					$(NAME)
 
-$(NAME):				$(OBJ) $(LIBFT)
-								$(CC) $(CFLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME)
+$(NAME):				$(OBJ) $(FT_PRINTF) $(LIBFT_A)
+	$(CC) $(CFLAGS) $(INC) $(OBJ) $(FT_PRINTF) $(LIBFT_A) -o $(NAME)
 
 #Compile object files from source files-------------------------------------------
 $(OBJ_DIR)%.o:			$(SRC_DIR)%.c
-								mkdir -p $(@D)
-								$(CC) $(CFLAGS) $(INC) -c $< -o $@
+	mkdir -p $(@D)
+	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 #Clean----------------------------------------------------------------------------
 clean:
-								$(RM) -r $(OBJ_DIR)
-								make clean -C ./ft_printf
+	$(RM) -r $(OBJ_DIR)
+	make clean -C ./ft_printf
 
 fclean:					clean
-								$(RM) $(NAME)
-								$(RM) $(LIBFT)
-								@echo "$(CYAN)push_swap executable files cleaned!$(DEF_COLOR)"
-								@echo "$(CYAN)libft executable files cleaned!$(DEF_COLOR)"
+	$(RM) $(NAME)
+	$(RM) $(FT_PRINTF)
+	$(RM) $(LIBFT_A)
+	@echo "$(CYAN)push_swap executable files cleaned!$(DEF_COLOR)"
+	@echo "$(CYAN)Libraries cleaned!$(DEF_COLOR)"
 
 re:						fclean all
-								@echo "$(GREEN)Cleaned and rebuilt everything for push_swap!$(DEF_COLOR)"
+	@echo "$(GREEN)Cleaned and rebuilt everything for push_swap!$(DEF_COLOR)"
 
 .PHONY:					start all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/02 11:15:44 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:18:46 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	append_node(t_stack_node **stack, int data, int index)
 	if (!stack)
 		return ;
 	node = malloc(sizeof(t_stack_node));
-	if (! node)
+	if (!node)
 		return ;
 	node_init(data, index, node);
 	if (!(*stack))
