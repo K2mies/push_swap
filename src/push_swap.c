@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 17:28:23 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/06 17:29:01 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:31:49 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	str = NULL;
+	//str = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
-	//str = ft_strdup("");
+	str = ft_strdup("");
 	str = str_comp(argc, argv);
 	split = ft_split(str, ' ');
 	free(str);
