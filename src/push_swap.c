@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/01/06 12:51:02 by rhvidste         ###   ########.fr       */
-=======
-/*   Updated: 2025/01/06 13:57:44 by rhvidste         ###   ########.fr       */
->>>>>>> 27f1670 (arbitrary add)
+/*   Created: 2025/01/06 17:28:23 by rhvidste          #+#    #+#             */
+/*   Updated: 2025/01/06 17:29:01 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +23,10 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
+	str = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
-	str = ft_strdup("");
+	//str = ft_strdup("");
 	str = str_comp(argc, argv);
 	split = ft_split(str, ' ');
 	free(str);
@@ -64,6 +61,8 @@ int	main(int argc, char **argv)
 	//else
 		//ft_printf("stack is sorted \n");
 	//ft_print_list(a);
+	while(a->prev)
+		a = a->prev;
 	free_stack(a);
 	free_stack(b);
 }
