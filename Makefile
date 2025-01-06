@@ -22,7 +22,7 @@ OBJ_DIR					= obj/
 #Compiler and Cflags---------------------------------
 
 CC 						= cc
-CFLAGS					= -Wall -Werror -Wextra -I
+CFLAGS					= -Wall -Werror -Wextra -g -I
 RM						= rm -f
 
 #Source Files---------------------------------------
