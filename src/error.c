@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 10:29:26 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/06 17:18:52 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/08 14:37:02 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -55,5 +55,5 @@ void	free_errors(t_stack_node **a)
 	free_stack(*a);
 	write(2, "Error", 5);
 	write(2, "\n", 1);
-	exit(1);
+	return ;
 }
