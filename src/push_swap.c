@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 13:04:29 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/06 17:40:04 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/08 15:52:53 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,5 @@ int	main(int argc, char **argv)
 		a = a->prev;
 	free_stack(a);
 	free_stack(b);
+	exit(0);
 }
