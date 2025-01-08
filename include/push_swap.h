@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:51:28 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/02 11:54:00 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/08 16:01:15 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int				error_syntax(char *str);
 int				error_duplicate(t_stack_node *a, int n);
 void			free_stack(t_stack_node *stack);
 void			free_split(char **vector);
-void			free_errors(t_stack_node **a);
+void			free_errors(t_stack_node **a, char **split);
 //stack functions---------------------------------------------------
 void			init_stack_a(t_stack_node **a, char **argv);
 t_stack_node	*get_cheapest(t_stack_node *stack);
