@@ -22,7 +22,7 @@ OBJ_DIR					= obj/
 #Compiler and Cflags---------------------------------
 
 CC 						= cc
-CFLAGS					= -Wall -Werror -Wextra -g -I
+CFLAGS					= -Wall -Werror -Wextra -I
 RM						= rm -f
 
 #Source Files---------------------------------------
@@ -50,7 +50,6 @@ start:
 						make all
 
 $(LIBFT):
-						#make -C ./libft
 						make -C ./ft_printf
 
 
