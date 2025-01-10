@@ -6,7 +6,7 @@
 #    By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 16:11:34 by rhvidste          #+#    #+#              #
-#    Updated: 2024/12/31 12:41:09 by rhvidste         ###   ########.fr        #
+#    Updated: 2025/01/08 10:40:29 by rhvidste         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = cc
 
-CFLAGS = -Werror -Wextra -Wall -I.
+CFLAGS = -Werror -Wextra -Wall -g -I.
 
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \

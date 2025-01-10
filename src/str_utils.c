@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 13:00:36 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/06 17:22:39 by rhvidste         ###   ########.fr       */
+/*   Updated: 2024/12/31 14:04:50 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,17 @@ char	*str_comp(int argc, char **argv)
 {
 	char	*str;
 	char	*temp;
+	char	*old_str;
 	int		i;
 
-	str = NULL;
 	i = 1;
 	while (i < argc)
 	{
-		if (str == NULL)
-			str = ft_strdup(argv[i]);
-		else
-		{
-			temp = ft_strjoin(str, " ");
-			free(str);
-			str = ft_strjoin(temp, argv[i]);
-			free(temp);
-		}
-		if (str == NULL)
-			return (NULL);
+		old_str = str;
+		temp = ft_strjoin(str, " ");
+		str = ft_strjoin(temp, argv[i]);
+		free(old_str);
+		free(temp);
 		i++;
 	}
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 10:24:18 by rhvidste          #+#    #+#             */
-/*   Updated: 2025/01/08 15:30:25 by rhvidste         ###   ########.fr       */
+/*   Updated: 2025/01/08 16:02:44 by rhvidste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	append_node(t_stack_node **stack, int data, int index)
 	if (!stack)
 		return ;
 	node = malloc(sizeof(t_stack_node));
-	if (!node)
+	if (! node)
 		return ;
 	node_init(data, index, node);
 	if (!(*stack))
@@ -94,6 +94,11 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	{
 		if (error_syntax(argv[i]))
 			free_errors(a, argv);
+		if (argv[0][0] == '\0')
+		{
+			ft_printf("test 1");
+			free_errors(a, argv);
+		}
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
 			free_errors(a, argv);

@@ -6,7 +6,7 @@
 #    By: rhvidste <rhvidste@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 09:49:02 by rhvidste          #+#    #+#              #
-#    Updated: 2024/12/31 12:39:54 by rhvidste         ###   ########.fr        #
+#    Updated: 2025/01/08 10:40:36 by rhvidste         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBFT		= libft
 SRC_DIR		= src/
 OBJ_DIR		= obj/
 CC			= cc
-CFLAGS		= -Wall -Werror -Wextra -I
+CFLAGS		= -Wall -Werror -Wextra -g -I
 RM			= rm -f
 AR			= ar rcs
 #------------------------------------------------------------------------------
